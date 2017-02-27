@@ -21,6 +21,9 @@ class PowerMeter:
 	def open(self):
 		# '@py' specifies to use Pyvisa-py as the backend instead of NI VISA (which I can't installed on ubuntu)
 		rm = visa.ResourceManager('@py')
+
+		if self.resource_id not in rm.list_resources():
+			raise Exception('Power Meter not recognized by PyVisa-py! Ensure that PyUSB is installed and device is recognized by machine (run lsusb).')
 		try:
 			inst = rm.open_resource(self.resource_id, timeout = 1)
 		except ValueError:

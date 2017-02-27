@@ -32,7 +32,7 @@ def autoLog(test_length, out_file):
 		if f != None:
 			f.write(str(delta_time) + ' ' + str(convertWattsToDbm(power)) + '\n')
 		else:
-			print convertWattsToDbm(power)
+			print convertWattsToDbm(power), 'dBm'
 		
 		if delta_time > test_length:
 			break
