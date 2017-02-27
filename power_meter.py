@@ -2,6 +2,7 @@
 # Requires PyVisa, PyVisa-py, and ThorlabsPM100
 # PyVisa : https://pyvisa.readthedocs.io/en/stable/
 # PyVisa-py : https://pyvisa-py.readthedocs.io/en/latest/
+# PuUSB : http://walac.github.io/pyusb/
 # ThorlabsPM100 : https://pypi.python.org/pypi/ThorlabsPM100
 
 import visa
